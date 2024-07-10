@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stalker_help/static/css/main.60fe8370.css",
+    "main.js": "/stalker_help/static/js/main.25cf7fbd.js",
+    "index.html": "/stalker_help/index.html",
+    "main.60fe8370.css.map": "/stalker_help/static/css/main.60fe8370.css.map",
+    "main.25cf7fbd.js.map": "/stalker_help/static/js/main.25cf7fbd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60fe8370.css",
+    "static/js/main.25cf7fbd.js"
+  ]
+}
