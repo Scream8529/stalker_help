@@ -33,12 +33,6 @@ export const ReputationConst: ReputationItem[] = [
     },
     {
         id: 7,
-        name: 'Рука бюрера',
-        value: 5,
-        img: 'https://vip20.activeusers.ru/upload/cab/39468/11eff453.jpg'
-    },
-    {
-        id: 8,
         name: 'Щупальца кровососа',
         value: 4,
         img: 'https://vip20.activeusers.ru/upload/cab/39468/d37057e9.jpg'
@@ -51,18 +45,24 @@ export const ReputationConst: ReputationItem[] = [
     },
     {
         id: 9,
+        name: 'Рука бюрера',
+        value: 5,
+        img: 'https://vip20.activeusers.ru/upload/cab/39468/11eff453.jpg'
+    },
+    {
+        id: 10,
         name: 'Стопа снорка',
         value: 5,
         img: 'https://vip20.activeusers.ru/upload/cab/39468/5bd32039.jpg'
     },
     {
-        id: 10,
+        id: 11,
         name: 'Синяя молния (полтергейста)',
         value: 7,
         img: 'https://vip20.activeusers.ru/upload/cab/39468/a2ae5941.jpg'
     },
     {
-        id: 11,
+        id: 12,
         name: 'Палец псевдогиганта',
         value: 15,
         img: 'https://vip20.activeusers.ru/upload/cab/39468/c911b729.jpg'

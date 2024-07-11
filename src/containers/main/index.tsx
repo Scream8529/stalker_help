@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ReputationConst } from "../../constants/reputations";
 import ReputationItem from "../../components/reputation_item";
 import { ReputationItemWithCount } from "../../models/reputation";
+import style from "./styles.module.css";
 
 export default function KalkulatorContainer() {
     const [items, setItems] = useState<ReputationItemWithCount[]>(
@@ -21,9 +22,9 @@ export default function KalkulatorContainer() {
         return total
     }
 
-    return <div>
+    return <div className={style.container}>
         {items.map(repItem => <ReputationItem key={repItem.id} item={repItem} toggleChangeCount={toggleChangeCount} />)}
-        <div>
+        <div className={style.totalContainer}>
             <h3>Итого репутации: {getTotalReputation()}</h3>
         </div>
     </div>;

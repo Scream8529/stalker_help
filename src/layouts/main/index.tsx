@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, createContext, useState } from "react";
 import Navigation from "../../components/navigation";
 
+
 interface ContextState {
     state: any;
     setState: (e: any) => void;
@@ -17,7 +18,7 @@ export default function MainLayout(props: PropsWithChildren<{}>) {
     return (
         <StateContext.Provider value={{ state, setState }}>
             <Navigation />
-            <div>{props.children}</div>
+            <div className='globalContainer'>{props.children}</div>
         </StateContext.Provider>
     );
 }

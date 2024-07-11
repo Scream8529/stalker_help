@@ -1,13 +1,17 @@
-.container{
-    padding: 10px 0;
+.container {
+    padding: 10px 5px;
+    background-color: #a7a7a7;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
-.navigation{
+.navigation {
     display: flex;
 }
-.navigation__item{
+.navigation__item {
     list-style: none;
 }
-.navigation__item button{
+.navigation__item button {
     background-color: unset;
     border: none;
     padding: 5px 20px;
@@ -15,7 +19,7 @@
     transition: background-color 0.1s ease-in;
     border-radius: 7px;
 }
-.navigation__item button:hover{
+.navigation__item button:hover {
     background-color: #ededed;
 
     text-decoration: underline;

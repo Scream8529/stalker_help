@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler } from 'react'
+import React from 'react'
 import { ReputationItemWithCount } from '../../models/reputation'
 import style from "./styles.module.css";
 
@@ -10,7 +10,7 @@ export default function ReputationItem(props: { item: ReputationItemWithCount, t
     return (
         <div className={style.container}>
             <div className={style.imgContainer}>
-                <img width={100} height={100} className={style.image} src={props.item.img} />
+                <img width={60} height={60} className={style.image} src={props.item.img} />
             </div>
             <div>
                 <h4>{props.item.name}</h4>
