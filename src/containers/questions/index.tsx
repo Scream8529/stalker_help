@@ -47,8 +47,8 @@ export default function QuestionsContainer() {
                 </div>
             </div>
             {state === 'search' &&
-                <div className={`${style.item_container} ${style.questions__container}`}>
-                    <div>
+                <div >
+                    <div className={`${style.item_container} ${style.questions__container}`}>
                         <form onSubmit={searchSubmit}>
                             <input value={search} onChange={onChangeSearchInput} />
                             <button type='submit'>Поиск</button>
