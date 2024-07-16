@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/stalker_help/static/css/main.7c75ae24.css",
-    "main.js": "/stalker_help/static/js/main.32262b55.js",
+    "main.css": "/stalker_help/static/css/main.e4402f8b.css",
+    "main.js": "/stalker_help/static/js/main.899fcb95.js",
+    "static/media/logo.png": "/stalker_help/static/media/logo.ac302501c479c84e7cf6.png",
     "static/media/bg.jpg": "/stalker_help/static/media/bg.f7ccb77104f22c8e666b.jpg",
     "index.html": "/stalker_help/index.html",
-    "main.7c75ae24.css.map": "/stalker_help/static/css/main.7c75ae24.css.map",
-    "main.32262b55.js.map": "/stalker_help/static/js/main.32262b55.js.map"
+    "main.e4402f8b.css.map": "/stalker_help/static/css/main.e4402f8b.css.map",
+    "main.899fcb95.js.map": "/stalker_help/static/js/main.899fcb95.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c75ae24.css",
-    "static/js/main.32262b55.js"
+    "static/css/main.e4402f8b.css",
+    "static/js/main.899fcb95.js"
   ]
 }
