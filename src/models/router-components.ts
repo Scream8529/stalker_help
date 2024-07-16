@@ -1,1 +1,1 @@
-export type RouterComponents = "reputation" | "questions"
+export type RouterComponents = "reputation" | "questions" | "faq"

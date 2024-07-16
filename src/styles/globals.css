@@ -32,3 +32,50 @@ body {
 .globalContainer {
     margin-top: 40px;
 }
+
+.container {
+    padding: 20px 10px;
+}
+
+.item_container {
+    padding: 20px;
+    background-color: antiquewhite;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.faq_title {
+}
+
+.faq_answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease-in;
+}
+
+.faq_icon {
+    background: rgb(0, 30, 48);
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.faq_icon::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    border: 6px solid transparent;
+    border-top: 10px solid rgb(0, 30, 48);
+}
+.faq_checkbox {
+    display: none;
+}
+
+.faq_checkbox:checked ~ .faq_answer {
+    transition: height 0.4s ease-in;
+    height: fit-content;
+}
+.faq_checkbox:checked ~ .faq_icon::after {
+    transform: translateY(-6px) rotateX(180deg);
+}

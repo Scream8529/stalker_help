@@ -1,11 +1,12 @@
 import React, { createContext, useState } from "react";
 import { RouterComponents } from "../../models/router-components";
 import { MainLayout } from "../../layouts";
-import { QuestionsContainer, ReputationContainer } from "../../containers";
+import { FaqContainer, QuestionsContainer, ReputationContainer } from "../../containers";
 
 const components: { [k in RouterComponents]: JSX.Element } = {
     reputation: <ReputationContainer />,
-    questions: <QuestionsContainer />
+    questions: <QuestionsContainer />,
+    faq: <FaqContainer />
 };
 
 export const RouterContext = createContext<null | {

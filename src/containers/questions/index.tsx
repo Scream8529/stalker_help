@@ -37,8 +37,8 @@ export default function QuestionsContainer() {
     }
 
     return (
-        <div className={style.container}>
-            <div className={style.item_container}>
+        <div className="container">
+            <div className="item_container">
                 <div>
                     <span>Показывать: </span>
                     <select value={state} onChange={toggleChangeSelect}>
@@ -48,7 +48,7 @@ export default function QuestionsContainer() {
             </div>
             {state === 'search' &&
                 <div >
-                    <div className={`${style.item_container} ${style.questions__container}`}>
+                    <div className={`item_container ${style.questions__container}`}>
                         <form onSubmit={searchSubmit}>
                             <input value={search} onChange={onChangeSearchInput} />
                             <button type='submit'>Поиск</button>
@@ -57,7 +57,7 @@ export default function QuestionsContainer() {
                     <div>
                         {
                             searchResult.map(item => (
-                                <div key={item.id} className={style.item_container}>
+                                <div key={item.id} className="item_container">
                                     <div>{item.quest}</div>
                                     <div>Ответ: <b>{item.answer}</b></div>
                                 </div>
@@ -70,7 +70,7 @@ export default function QuestionsContainer() {
             {state === 'questions' && <div>
                 {
                     questionsConst.map(item => (
-                        <div key={item.id} className={style.item_container}>
+                        <div key={item.id} className="item_container">
                             <div>{item.quest}</div>
                             <div>Ответ: <b>{item.answer}</b></div>
                         </div>
