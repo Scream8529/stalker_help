@@ -4,7 +4,7 @@ import ReputationItem from "../../components/reputation_item";
 import { ReputationItemWithCount } from "../../models/reputation";
 import style from "./styles.module.css";
 
-export default function KalkulatorContainer() {
+export default function ReputationContainer() {
     const [items, setItems] = useState<ReputationItemWithCount[]>(
         () => ReputationConst.map(item => ({ ...item, count: 0, }))
     )

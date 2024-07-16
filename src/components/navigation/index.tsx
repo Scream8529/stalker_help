@@ -15,11 +15,18 @@ export default function Navigation() {
         <nav className={style.container}>
             <ul className={style.navigation}>
                 <li
-                    onClick={toggleRoute("kalkulator")}
+                    onClick={toggleRoute("reputation")}
                     className={style.navigation__item}
                 >
                     <button>Калькулятор репутации</button>
                 </li>
+                <li
+                    onClick={toggleRoute("questions")}
+                    className={style.navigation__item}
+                >
+                    <button>Вопросы контроллера</button>
+                </li>
+
             </ul>
         </nav>
     );
