@@ -1,12 +1,13 @@
 import React, { createContext, useState } from "react";
 import { RouterComponents } from "../../models/router-components";
 import { MainLayout } from "../../layouts";
-import { FaqContainer, QuestionsContainer, ReputationContainer } from "../../containers";
+import { FaqContainer, QuestionsContainer, ReputationContainer, RulesContainer } from "../../containers";
 
 const components: { [k in RouterComponents]: JSX.Element } = {
+    rules: <RulesContainer />,
     reputation: <ReputationContainer />,
     questions: <QuestionsContainer />,
-    faq: <FaqContainer />
+    faq: <FaqContainer />,
 };
 
 export const RouterContext = createContext<null | {
@@ -15,7 +16,7 @@ export const RouterContext = createContext<null | {
 
 export default function Router() {
     const [currentComponents, setCurrentComponents] =
-        useState<RouterComponents>("reputation");
+        useState<RouterComponents>("rules");
 
     return (
         <RouterContext.Provider value={{ setCurrentComponents }}>
