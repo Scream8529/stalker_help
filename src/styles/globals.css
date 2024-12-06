@@ -26,7 +26,6 @@ textarea {
 body {
     min-width: 100vw;
     min-height: 100vh;
-    background-image: url("../../public/imgs/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

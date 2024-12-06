@@ -1,7 +1,14 @@
-import React, { FormEvent, FormEventHandler, useState } from 'react'
-import style from "./styles.module.css";
+import { FormEvent, useState } from 'react'
 import { questionsConst } from '../../constants/questions';
 import { IQuest } from '../../models/quest';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import QuestResults from '../../components/quest_results';
+import { Box, Container } from '@mui/material';
 
 const switchContsnts = [
     {
@@ -35,49 +42,40 @@ export default function QuestionsContainer() {
         })
         setSearchResult(result)
     }
-
     return (
-        <div className="container">
-            <div className="item_container">
-                <div>
-                    <span>Показывать: </span>
-                    <select value={state} onChange={toggleChangeSelect}>
-                        {switchContsnts.map(item => <option value={item.value}>{item.name}</option>)}
-                    </select>
-                </div>
-            </div>
+        <Container maxWidth="sm">
+            <Box sx={{ p: 2, bgcolor: 'main' }} >
+                <FormControl fullWidth>
+                    <InputLabel id="demo-simple-select-label">Показывать:</InputLabel>
+                    <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={state}
+                        label="Показывать:"
+                        onChange={toggleChangeSelect}
+                    >
+                        {switchContsnts.map(item => <MenuItem value={item.value}>{item.name}</MenuItem>)}
+                    </Select>
+                </FormControl>
+            </Box>
             {state === 'search' &&
-                <div >
-                    <div className={`item_container ${style.questions__container}`}>
+                <>
+                    <Box sx={{ p: 2, bgcolor: 'background.paper' }}>
                         <form onSubmit={searchSubmit}>
-                            <input value={search} onChange={onChangeSearchInput} />
-                            <button type='submit'>Поиск</button>
+                            <FormControl fullWidth>
+                                <TextField id="outlined-basic"
+                                    label="Поиск" variant="outlined"
+                                    value={search} onChange={onChangeSearchInput}
+                                />
+                                <Button sx={{ marginTop: '5px' }} type='submit' variant="contained">Поиск</Button>
+                            </FormControl>
+
                         </form>
-                    </div>
-                    <div>
-                        {
-                            searchResult.map(item => (
-                                <div key={item.id} className="item_container">
-                                    <div>{item.quest}</div>
-                                    <div>Ответ: <b>{item.answer}</b></div>
-                                </div>
-                            ))
-                        }
-
-                    </div>
-                </div>
+                    </Box>
+                    <QuestResults items={searchResult} />
+                </>
             }
-            {state === 'questions' && <div>
-                {
-                    questionsConst.map(item => (
-                        <div key={item.id} className="item_container">
-                            <div>{item.quest}</div>
-                            <div>Ответ: <b>{item.answer}</b></div>
-                        </div>
-                    ))
-                }
-
-            </div>}
-        </div>
+            {state === 'questions' && <QuestResults items={questionsConst} />}
+        </Container >
     )
 }

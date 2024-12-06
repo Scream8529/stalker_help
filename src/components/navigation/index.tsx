@@ -1,37 +1,17 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
+import { Menu } from "@mui/icons-material";
+import { Drawer, Fab, List, ListItemButton, ListItemText, ListSubheader } from "@mui/material";
 import { RouterComponents } from "../../models/router-components";
 import { RouterContext } from "../router";
-import style from "./styles.module.css";
+import { navigationMenu } from "../../constants/navigation";
+import logo from '../../imgs/logo.png'
 
-interface MenuItem {
-    id: number;
-    text: string;
-    route: RouterComponents
-}
-
-const navigationMenu: MenuItem[] = [
-    {
-        id: 0,
-        text: 'Правила',
-        route: 'rules'
-    },
-    {
-        id: 1,
-        text: 'Вопросы контроллера',
-        route: 'questions'
-    },
-    {
-        id: 2,
-        text: 'FAQ',
-        route: 'faq'
-    },
-    {
-        id: 3,
-        text: 'Калькулятор репутации',
-        route: 'reputation'
-    }
-]
-
+const fabStyle = {
+    position: 'fixed',
+    bottom: 16,
+    right: 16,
+    zIndex: 99999,
+};
 
 export default function Navigation() {
     const router = useContext(RouterContext);
@@ -47,28 +27,53 @@ export default function Navigation() {
             router?.setCurrentComponents(e);
         };
     }
+
+    function toggleCloseNavigation() {
+        setShowNavigation(false)
+    }
     return (
         <>
-            <button className={style.burger__button} onClick={toggleShowNavigation}>
-                <div className={style.burger__line} />
-                <div className={style.burger__line} />
-                <div className={style.burger__line} />
-            </button>
-            <nav className={style.container} style={showNavigation ? { display: 'block' } : {}}>
-                <div className={style.logo} />
-                <ul className={style.navigation}>
+            <Fab sx={(theme) => ({
+                ...fabStyle,
+                [theme.breakpoints.up('md')]: {
+                    display: 'none'
+                }
+            })} color="primary" aria-label="add" onClick={toggleShowNavigation}>
+                <Menu />
+            </Fab>
+            <Drawer open={showNavigation} onClose={toggleCloseNavigation} anchor='top'>
+                <List
+                    sx={{ width: '100%', }}
+                    component="nav"
+                    aria-labelledby="nested-list-subheader"
+                    subheader={
+                        <ListSubheader
+                            component="div" id="nested-list-subheader">
+                            <img
+                                style={{
+                                    display: 'block', width: '200px', margin: '10px auto'
+                                }}
+                                width={200}
+                                height={200}
+                                src={logo}
+                                alt={'Mercenaries logo'}
+                                loading="lazy"
+                            />
+
+                        </ListSubheader>
+                    }
+                >
                     {
                         navigationMenu.map(navItem => (
-                            <li
+                            <ListItemButton
                                 onClick={toggleRoute(navItem.route)}
-                                className={style.navigation__item}
                             >
-                                <button>{navItem.text}</button>
-                            </li>
+                                <ListItemText primary={navItem.text} />
+                            </ListItemButton>
                         ))
                     }
-                </ul>
-            </nav>
+                </List>
+            </Drawer>
         </>
 
     );

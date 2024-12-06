@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ReputationConst } from "../../constants/reputations";
 import ReputationItem from "../../components/reputation_item";
 import { ReputationItemWithCount } from "../../models/reputation";
-import style from "./styles.module.css";
+import Box from "@mui/material/Box";
 
 export default function ReputationContainer() {
     const [items, setItems] = useState<ReputationItemWithCount[]>(
@@ -22,10 +22,19 @@ export default function ReputationContainer() {
         return total
     }
 
-    return <div className={style.container}>
+    return <>
         {items.map(repItem => <ReputationItem key={repItem.id} item={repItem} toggleChangeCount={toggleChangeCount} />)}
-        <div className={style.totalContainer}>
+        <Box
+            sx={{
+                zIndex: 9999,
+                width: "100%",
+                padding: "20px 10px",
+                backgroundColor: "antiquewhite",
+                position: "fixed",
+                bottom: "0",
+            }}
+        >
             <h3>Итого репутации: {getTotalReputation()}</h3>
-        </div>
-    </div>;
+        </Box>
+    </ >;
 }

@@ -64,7 +64,7 @@ export const ReputationConst: ReputationItem[] = [
     {
         id: 12,
         name: 'Палец псевдогиганта',
-        value: 15,
+        value: 18,
         img: 'https://vip20.activeusers.ru/upload/cab/39468/c911b729.jpg'
     },
     {
