@@ -1,6 +1,6 @@
 {
     "name": "StalkerHelp",
-    "start_url": "https://scream8529.github.io/stalker_help?utm_source=homescreen",
+    "start_url": "https://scream8529.github.io?utm_source=homescreen",
     "shortcuts": [
         {
             "short_name": "StalkerHelp",
@@ -12,7 +12,7 @@
                     "type": "image/png"
                 }
             ],
-            "start_url": "/?utm_source=homescreen",
+            "start_url": "/stalker_help/?utm_source=homescreen",
             "background_color": "#222",
             "theme_color": "#222",
             "display": "standalone"
