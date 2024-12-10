@@ -1,15 +1,21 @@
 {
-    "short_name": "StalkerHelp",
-    "name": "StalkerHelp App",
-    "icons": [
+    "name": "StalkerHelp",
+    "start_url": "https://scream8529.github.io/stalker_help?utm_source=homescreen",
+    "shortcuts": [
         {
-            "src": "icon.png",
-            "sizes": "192x192",
-            "type": "image/png"
+            "short_name": "StalkerHelp",
+            "name": "StalkerHelp App",
+            "icons": [
+                {
+                    "src": "icon.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ],
+            "start_url": "/?utm_source=homescreen",
+            "background_color": "#222",
+            "theme_color": "#222",
+            "display": "standalone"
         }
-    ],
-    "start_url": "https://scream8529.github.io/stalker_help/index.html?utm_source=homescreen",
-    "background_color": "#222",
-    "theme_color": "#222",
-    "display": "standalone"
+    ]
 }
