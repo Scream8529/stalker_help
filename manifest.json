@@ -1,6 +1,6 @@
 {
-    "short_name": "My First PWA",
-    "name": "My First Progressive Web App",
+    "short_name": "StalkerHelp",
+    "name": "StalkerHelp App",
     "icons": [
         {
             "src": "icon.png",
@@ -8,7 +8,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "/stalker_help?utm_source=homescreen",
+    "start_url": "https://scream8529.github.io/stalker_help/index.html?utm_source=homescreen",
     "background_color": "#222",
     "theme_color": "#222",
     "display": "standalone"
