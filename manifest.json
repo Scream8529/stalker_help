@@ -8,7 +8,7 @@
             "sizes": "192x192"
         }
     ],
-    "start_url": "stalker_help/?utm_source=homescreen",
+    "start_url": "stalker_help/index.html?utm_source=homescreen",
     "background_color": "#fafafa",
     "theme_color": "#fafafa"
 }
