@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Stalker Help",
+  "name": "Stalker Help App for VK bot game",
   "icons": [
     {
       "src": "favicon.ico",
