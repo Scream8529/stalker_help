@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/stalker_help/static/css/main.db9dc9c6.css",
-    "main.js": "/stalker_help/static/js/main.4027d21d.js",
+    "main.css": "/stalker_help/static/css/main.7d7e29f9.css",
+    "main.js": "/stalker_help/static/js/main.276773ac.js",
     "static/js/787.b8e68a19.chunk.js": "/stalker_help/static/js/787.b8e68a19.chunk.js",
     "static/media/logo.png": "/stalker_help/static/media/logo.ac302501c479c84e7cf6.png",
     "service-worker.js": "/stalker_help/service-worker.js",
     "index.html": "/stalker_help/index.html",
-    "main.db9dc9c6.css.map": "/stalker_help/static/css/main.db9dc9c6.css.map",
-    "main.4027d21d.js.map": "/stalker_help/static/js/main.4027d21d.js.map",
+    "main.7d7e29f9.css.map": "/stalker_help/static/css/main.7d7e29f9.css.map",
+    "main.276773ac.js.map": "/stalker_help/static/js/main.276773ac.js.map",
     "787.b8e68a19.chunk.js.map": "/stalker_help/static/js/787.b8e68a19.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db9dc9c6.css",
-    "static/js/main.4027d21d.js"
+    "static/css/main.7d7e29f9.css",
+    "static/js/main.276773ac.js"
   ]
 }
